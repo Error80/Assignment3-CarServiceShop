@@ -1,5 +1,5 @@
 ﻿Assignment3-CarServiceShop
-1.0.0.0
+
 
 winexe
 C#
@@ -12,9 +12,9 @@ TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\Anton\Documents\GitHub\Assignment3-CarServiceShop\Assignment3-CarServiceShop\App.xaml
 11407045341
 
-6486937398
+4297154274
 198-1509178875
 MainWindow.xaml;
 
-True
+False
 

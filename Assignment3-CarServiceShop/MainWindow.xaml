@@ -5,17 +5,54 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Assignment3_CarServiceShop"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="675" Width="1200">
     <Grid>
         
         <!---Row Definitions-->
         <Grid.RowDefinitions>
-            
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
 
         <!---Column Definitions-->
         <Grid.ColumnDefinitions>
-
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
+        
+        <!-- Customer Information -->
+        <Label Name="CustomerInformationLabel" Content="Customer Information" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5" FontSize="15" FontWeight="Bold"/>
+
+        <!-- First Name -->
+        <Label Name="FirstNameLabel" Content="First Name:" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" Margin="5" FontSize="15"/>
+        <TextBox Name="FirstNameTextBox" Grid.Row="1" Grid.Column="1" Margin="5"/>
+
+        <!-- Last Name -->
+        <Label Name="LastNameLabel" Content="Last Name:" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" Margin="5" FontSize="15"/>
+        <TextBox Name="LastNameTextBox" Grid.Row="2" Grid.Column="1" Margin="5"/>
+
+        <!-- Phone Number -->
+        <Label Name="PhoneNumberLabel" Content="Phone Number:" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right" Margin="5" FontSize="15"/>
+        <TextBox Name="PhoneNumberTextBox" Grid.Row="3" Grid.Column="1" Margin="5"/>
+        
+        
     </Grid>
 </Window>
