@@ -52,7 +52,10 @@
         <!-- Phone Number -->
         <Label Name="PhoneNumberLabel" Content="Phone Number:" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right" Margin="5" FontSize="15"/>
         <TextBox Name="PhoneNumberTextBox" Grid.Row="3" Grid.Column="1" Margin="5"/>
-        
-        
+
+        <!-- Customer Information -->
+        <Label Name="CarInformationLabel" Content="Car Information" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5" FontSize="15" FontWeight="Bold"/>
+
+
     </Grid>
 </Window>

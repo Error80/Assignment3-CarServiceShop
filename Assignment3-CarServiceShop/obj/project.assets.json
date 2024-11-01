@@ -8,19 +8,19 @@
     "net8.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Anton\\.nuget\\packages\\": {}
+    "C:\\Users\\Nino\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Anton\\Documents\\GitHub\\Assignment3-CarServiceShop\\Assignment3-CarServiceShop\\Assignment3-CarServiceShop.csproj",
+      "projectUniqueName": "C:\\Users\\Nino\\source\\repos\\Assignment3-CarServiceShop\\Assignment3-CarServiceShop\\Assignment3-CarServiceShop.csproj",
       "projectName": "Assignment3-CarServiceShop",
-      "projectPath": "C:\\Users\\Anton\\Documents\\GitHub\\Assignment3-CarServiceShop\\Assignment3-CarServiceShop\\Assignment3-CarServiceShop.csproj",
-      "packagesPath": "C:\\Users\\Anton\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Anton\\Documents\\GitHub\\Assignment3-CarServiceShop\\Assignment3-CarServiceShop\\obj\\",
+      "projectPath": "C:\\Users\\Nino\\source\\repos\\Assignment3-CarServiceShop\\Assignment3-CarServiceShop\\Assignment3-CarServiceShop.csproj",
+      "packagesPath": "C:\\Users\\Nino\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Nino\\source\\repos\\Assignment3-CarServiceShop\\Assignment3-CarServiceShop\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Anton\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Nino\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -28,6 +28,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -69,7 +70,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
