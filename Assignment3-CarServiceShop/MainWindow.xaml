@@ -66,17 +66,19 @@
 
         <!-- Year -->
         <Label Name="YearLabel" Content="Year:" Grid.Row="8" Grid.Column="0" HorizontalAlignment="Right" Margin="5" FontSize="15"/>
-        <ComboBox Name="YearTextBox" Grid.Row="8" Grid.Column="1" Margin="5"/>
+        <ComboBox Name="YearComboBox" Grid.Row="8" Grid.Column="1" Margin="5"/>
 
         <!-- Colour -->
         <Label Name="ColourLabel" Content="Colour:" Grid.Row="9" Grid.Column="0" HorizontalAlignment="Right" Margin="5" FontSize="15"/>
         <TextBox Name="ColourTextBox" Grid.Row="9" Grid.Column="1" Margin="5"/>
 
+        <ComboBox Name="genderComboBox" HorizontalAlignment="Left" Margin="115,75,0,0" VerticalAlignment="Top" Width="120"/>
+
         <!-- Services -->
         <Label Name="ServicesLabel" Content="Services:" Grid.Row="10" Grid.Column="0" HorizontalAlignment="Right" Margin="5" FontSize="15"/>
         <CheckBox Name="EngineOilChangeCheckBox" Content="Engine Oil Change" Grid.Row="10" Grid.Column="1" VerticalAlignment="Center"/>
         <CheckBox Name="TransmissionOilChangeCheckBox" Content="Transmission Oil Change" Grid.Row="11" Grid.Column="1" VerticalAlignment="Center"/>
-        <CheckBox Name="AirFilterChangeCheckBox" Content="Filter Oil Change" Grid.Row="12" Grid.Column="1" VerticalAlignment="Center"/>
+        <CheckBox Name="AirFilterChangeCheckBox" Content="Air Filter Change" Grid.Row="12" Grid.Column="1" VerticalAlignment="Center"/>
 
         <!-- Cost -->
         <Label Name="CostLabel" Content="Cost:" Grid.Row="13" Grid.Column="0" HorizontalAlignment="Right" Margin="5" FontSize="15"/>
@@ -87,14 +89,14 @@
         <ListView Name="CarServiceSummaryListView" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="4" Grid.RowSpan="13" Margin="5">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="#" Width="20" DisplayMemberBinding="{Binding Number}"/>
-                    <GridViewColumn Header="First Name" Width="125" DisplayMemberBinding="{Binding FirstName}"/>
-                    <GridViewColumn Header="Last Name" Width="125" DisplayMemberBinding="{Binding LastName}"/>
-                    <GridViewColumn Header="Phone" Width="125" DisplayMemberBinding="{Binding Phone}"/>
-                    <GridViewColumn Header="Make" Width="100" DisplayMemberBinding="{Binding Make}"/>
-                    <GridViewColumn Header="Model" Width="125" DisplayMemberBinding="{Binding Model}"/>
-                    <GridViewColumn Header="Year" Width="75" DisplayMemberBinding="{Binding Year}"/>
-                    <GridViewColumn Header="Colour" Width="110" DisplayMemberBinding="{Binding Colour}"/>
+                    <GridViewColumn Header="#" Width="20" DisplayMemberBinding="{Binding GetCount}"/>
+                    <GridViewColumn Header="First Name" Width="125" DisplayMemberBinding="{Binding GetFirstName}"/>
+                    <GridViewColumn Header="Last Name" Width="125" DisplayMemberBinding="{Binding GetLastName}"/>
+                    <GridViewColumn Header="Phone" Width="125" DisplayMemberBinding="{Binding GetPhoneNumber}"/>
+                    <GridViewColumn Header="Make" Width="100" DisplayMemberBinding="{Binding GetMake}"/>
+                    <GridViewColumn Header="Model" Width="125" DisplayMemberBinding="{Binding GetModel}"/>
+                    <GridViewColumn Header="Year" Width="75" DisplayMemberBinding="{Binding GetYear}"/>
+                    <GridViewColumn Header="Colour" Width="110" DisplayMemberBinding="{Binding GetColour}"/>
                 </GridView>
             </ListView.View>
         </ListView>
