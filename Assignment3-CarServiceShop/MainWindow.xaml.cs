@@ -271,5 +271,9 @@ namespace Assignment3_CarServiceShop
             //Close the program
             Close();
         }
+
+        private void CarServiceSummaryListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+        }
     }
 }
