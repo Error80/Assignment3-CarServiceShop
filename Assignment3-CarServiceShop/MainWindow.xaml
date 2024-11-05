@@ -43,53 +43,51 @@
 
         <!-- First Name -->
         <Label Name="FirstNameLabel" Content="First Name:" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" Margin="5" FontSize="15"/>
-        <TextBox Name="FirstNameTextBox" Grid.Row="1" Grid.Column="1" VerticalContentAlignment="Center" Margin="5" FontSize="15"/>
+        <TextBox Name="FirstNameTextBox" Grid.Row="1" Grid.Column="1" VerticalContentAlignment="Center" Margin="5" FontSize="15" ToolTip="Enter your first name here" TabIndex="0"/>
 
         <!-- Last Name -->
         <Label Name="LastNameLabel" Content="Last Name:" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" Margin="5" FontSize="15"/>
-        <TextBox Name="LastNameTextBox" Grid.Row="2" Grid.Column="1" VerticalContentAlignment="Center" Margin="5" FontSize="15"/>
+        <TextBox Name="LastNameTextBox" Grid.Row="2" Grid.Column="1" VerticalContentAlignment="Center" Margin="5" FontSize="15" ToolTip="Enter your last name here" TabIndex="1"/>
 
         <!-- Phone Number -->
         <Label Name="PhoneNumberLabel" Content="Phone Number:" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right" Margin="5" FontSize="15"/>
-        <TextBox Name="PhoneNumberTextBox" Grid.Row="3" Grid.Column="1" VerticalContentAlignment="Center" Margin="5" FontSize="15"/>
+        <TextBox Name="PhoneNumberTextBox" Grid.Row="3" Grid.Column="1" VerticalContentAlignment="Center" Margin="5" FontSize="15" ToolTip="Enter your phone number here. Phone number must be a 10 digit number" TabIndex="2"/>
 
         <!-- Car Information -->
         <Label Name="CarInformationLabel" Content="Car Information" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5" FontSize="15" FontWeight="Bold"/>
 
         <!-- Make -->
         <Label Name="MakeLabel" Content="Make:" Grid.Row="6" Grid.Column="0" HorizontalAlignment="Right" Margin="5" FontSize="15"/>
-        <ComboBox Name="MakeComboBox" Grid.Row="6" Grid.Column="1" VerticalContentAlignment="Center" Margin="5" FontSize="15"/>
+        <ComboBox Name="MakeComboBox" Grid.Row="6" Grid.Column="1" VerticalContentAlignment="Center" Margin="5" FontSize="15" ToolTip="Select the company that manufactured your car from the dropdown menu" TabIndex="3"/>
 
         <!-- Model -->
         <Label Name="ModelLabel" Content="Model:" Grid.Row="7" Grid.Column="0" HorizontalAlignment="Right" Margin="5" FontSize="15"/>
-        <TextBox Name="ModelTextBox" Grid.Row="7" Grid.Column="1" VerticalContentAlignment="Center" Margin="5" FontSize="15"/>
+        <TextBox Name="ModelTextBox" Grid.Row="7" Grid.Column="1" VerticalContentAlignment="Center" Margin="5" FontSize="15" ToolTip="Enter the model name of your car" TabIndex="4"/>
 
         <!-- Year -->
         <Label Name="YearLabel" Content="Year:" Grid.Row="8" Grid.Column="0" HorizontalAlignment="Right" Margin="5" FontSize="15"/>
-        <ComboBox Name="YearComboBox" Grid.Row="8" Grid.Column="1" VerticalContentAlignment="Center" Margin="5" FontSize="15"/>
+        <ComboBox Name="YearComboBox" Grid.Row="8" Grid.Column="1" VerticalContentAlignment="Center" Margin="5" FontSize="15" ToolTip="Select year your car was manufactured from the dropdown menu" TabIndex="5"/>
 
         <!-- Colour -->
         <Label Name="ColourLabel" Content="Colour:" Grid.Row="9" Grid.Column="0" HorizontalAlignment="Right" Margin="5" FontSize="15"/>
-        <TextBox Name="ColourTextBox" Grid.Row="9" Grid.Column="1" VerticalContentAlignment="Center" Margin="5" FontSize="15"/>
-
-        <ComboBox Name="genderComboBox" HorizontalAlignment="Left" Margin="115,75,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="ColourTextBox" Grid.Row="9" Grid.Column="1" VerticalContentAlignment="Center" Margin="5" FontSize="15" ToolTip="Enter the colour of your car" TabIndex="6"/>
 
         <!-- Services -->
         <Label Name="ServicesLabel" Content="Services:" Grid.Row="10" Grid.Column="0" HorizontalAlignment="Right" Margin="5" FontSize="15"/>
-        <CheckBox Name="EngineOilChangeCheckBox" Content="Engine Oil Change" Grid.Row="10" Grid.Column="1" VerticalAlignment="Center"/>
-        <CheckBox Name="TransmissionOilChangeCheckBox" Content="Transmission Oil Change" Grid.Row="11" Grid.Column="1" VerticalAlignment="Center"/>
-        <CheckBox Name="AirFilterChangeCheckBox" Content="Air Filter Change" Grid.Row="12" Grid.Column="1" VerticalAlignment="Center"/>
+        <CheckBox Name="EngineOilChangeCheckBox" Content="Engine Oil Change" Grid.Row="10" Grid.Column="1" VerticalAlignment="Center" ToolTip="Check this if you need your Engine Oil Changed" TabIndex="7"/>
+        <CheckBox Name="TransmissionOilChangeCheckBox" Content="Transmission Oil Change" Grid.Row="11" Grid.Column="1" VerticalAlignment="Center" ToolTip="Check this if you need your Transmission Oil Changed" TabIndex="8"/>
+        <CheckBox Name="AirFilterChangeCheckBox" Content="Air Filter Change" Grid.Row="12" Grid.Column="1" VerticalAlignment="Center" ToolTip="Check this if you need your Air Filther Changed" TabIndex="9"/>
 
         <!-- Cost -->
         <Label Name="CostLabel" Content="Cost:" Grid.Row="13" Grid.Column="0" HorizontalAlignment="Right" Margin="5" FontSize="15"/>
-        <TextBox Name="CostTextBox" Text="$" Grid.Row="13" Grid.Column="1" VerticalContentAlignment="Center" Margin="5" IsReadOnly="True" FontSize="15" BorderBrush="Black" Background="White"/>
+        <TextBox Name="CostTextBox" Text="$" Grid.Row="13" Grid.Column="1" VerticalContentAlignment="Center" Margin="5" IsReadOnly="True" FontSize="15" BorderBrush="Black" Background="White" ToolTip="The total cost with show up here" TabIndex="10"/>
 
         <!-- Car Service Summary -->
-        <Label Name="CarServiceSummaryLabel" Content="Car Service Summary" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="4" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5" FontSize="15" FontWeight="Bold"/>
-        <ListView Name="CarServiceSummaryListView" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="4" Grid.RowSpan="13" Margin="5" SelectedIndex="0">
+        <Label Name="CarServiceSummaryLabel" Content="Car Service Summary" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="4" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5" FontSize="15" FontWeight="Bold" ToolTip="List of cars"/>
+        <ListView Name="CarServiceSummaryListView" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="4" Grid.RowSpan="13" Margin="5" ToolTip="Car serive summary list" TabIndex="11">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="#" x:Name="Count" Width="35" DisplayMemberBinding="{Binding GetCount}"/>
+                    <GridViewColumn Header="#" Width="35" DisplayMemberBinding="{Binding GetCount}"/>
                     <GridViewColumn Header="First Name" Width="125" DisplayMemberBinding="{Binding GetFirstName}"/>
                     <GridViewColumn Header="Last Name" Width="125" DisplayMemberBinding="{Binding GetLastName}"/>
                     <GridViewColumn Header="Phone" Width="125" DisplayMemberBinding="{Binding GetPhoneNumber}"/>
@@ -102,12 +100,12 @@
         </ListView>
         
         <!-- Buttons -->
-        <Button Name="AddButton" Content="Add" Grid.Row="15" Grid.Column="0" Margin="5" Click="Button_Click"/>
-        <Button Name="NewButton" Content="New" Grid.Row="15" Grid.Column="1" Margin="5" Click="NewButton_Click"/>
-        <Button Name="UpdateButton" Content="Update" Grid.Row="15" Grid.Column="2" Margin="5" Click="Button_Click"/>
-        <Button Name="RemoveButton" Content="Remove" Grid.Row="15" Grid.Column="3" Margin="5" Click="RemoveButton_Click"/>
-        <Button Name="RemoveAllButton" Content="Remove All" Grid.Row="15" Grid.Column="4" Margin="5" Click="RemoveAllButton_Click"/>
-        <Button Name="Exit" Content="Exit" Grid.Row="15" Grid.Column="5" Margin="5" Click="Exit_Click"/>
+        <Button Name="AddButton" Content="Add" Grid.Row="15" Grid.Column="0" Margin="5" Click="Button_Click" ToolTip="Add a car to the summary" TabIndex="12"/>
+        <Button Name="NewButton" Content="New" Grid.Row="15" Grid.Column="1" Margin="5" Click="NewButton_Click" ToolTip="Resets all inputs without clearing the summary" TabIndex="13"/>
+        <Button Name="UpdateButton" Content="Update" Grid.Row="15" Grid.Column="2" Margin="5" Click="Button_Click" ToolTip="Modify or Update a car in the summary" TabIndex="14"/>
+        <Button Name="RemoveButton" Content="Remove" Grid.Row="15" Grid.Column="3" Margin="5" Click="RemoveButton_Click" ToolTip="Remove the selected car from the summary" TabIndex="15"/>
+        <Button Name="RemoveAllButton" Content="Remove All" Grid.Row="15" Grid.Column="4" Margin="5" Click="RemoveAllButton_Click" ToolTip="Clears the entire window" TabIndex="16"/>
+        <Button Name="Exit" Content="Exit" Grid.Row="15" Grid.Column="5" Margin="5" Click="Exit_Click" ToolTip="Exits the program" TabIndex="17"/>
 
 
 

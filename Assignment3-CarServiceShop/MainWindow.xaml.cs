@@ -22,16 +22,15 @@ namespace Assignment3_CarServiceShop
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        // Constants
         public const double tax = 0.13;
-
         public const double engineOilChangePrice = 60;
-
         public const double transmissionOilChangePrice = 120;
-
         public const double airFilterChangePrice = 40.5;
 
+        // Global Varables
         public int identificationNumber = 0;
-
         public int count = 0;
 
         /// <summary>
@@ -59,21 +58,23 @@ namespace Assignment3_CarServiceShop
         /// <param name="price"></param>
         /// <param name="tax"></param>
         /// <returns></returns>
-        private static double AddCost(bool service, double price, double tax)
+        private static double AddCost(bool service, double price)
         {
-            double finalCost = 0;
+            double cost = 0;
+
+            // Checks if the corrisponding checkbox is checked
             if (service == true) 
             {
-                finalCost = price + (price * tax);
 
-                return finalCost;
+                //c = p
+                cost = price;
 
-            } else
-            {
-                return 0;
             }
+
+            return cost;
         }
 
+        // Initalizes a collection linked to the services object
         private ObservableCollection<Service> services = new ObservableCollection<Service>();
         public MainWindow()
         {
@@ -109,12 +110,14 @@ namespace Assignment3_CarServiceShop
                 "Volkswagen"
                 ];
 
+            // Adds Makes to the Make Combo box
             for (int index = 0; index < carMakes.Length; index++)
             {
                 MakeComboBox.Items.Add(carMakes[index]);
             }
 
-            for (int year = 2000; year < 2025; year++)
+            // Adds Years 1980 - 2024 to the Years Combo box
+            for (int year = 1980; year < 2025; year++)
             {
                 YearComboBox.Items.Add(year.ToString());
             }
@@ -147,7 +150,10 @@ namespace Assignment3_CarServiceShop
                 // Get text from the Model Text box
                 string model = ModelTextBox.Text;
 
-                // Get text from the Colour Text box
+                // Get text from the Year Combo Box
+                int year = int.Parse(YearComboBox.Text);
+
+                // Get chosen item from the Year dropdown menu or combo box
                 string colour = ColourTextBox.Text;
 
                 // Check if the Engine Oil Change is Checked
@@ -161,31 +167,23 @@ namespace Assignment3_CarServiceShop
 
                 // Initialize the cost varable
                 double cost = 
-                    AddCost(engineOilChange, engineOilChangePrice, tax) +
-                    AddCost(transmissionOilChange, transmissionOilChangePrice, tax) +
-                    AddCost(airFilterChange, airFilterChangePrice, tax);
+                    AddCost(engineOilChange, engineOilChangePrice) +
+                    AddCost(transmissionOilChange, transmissionOilChangePrice) +
+                    AddCost(airFilterChange, airFilterChangePrice);
 
-                double roundedCost = Math.Round(cost, 2);
+                // Adds the HST
+                double finalCost = cost + (cost * tax);
+
+                // Round the cost to the nearest hundreth
+                double roundedCost = Math.Round(finalCost, 2);
+
+                // Set the cost depending on what services was checked
                 CostTextBox.Text = "$" + roundedCost.ToString();
-
-                int year = int.Parse(YearComboBox.Text);
 
                 // Incrament identificationNumber by 1
                 identificationNumber++;
 
-                if (buttonName == "AddButton")
-                {
-
-                    // Incrament count by 1
-                    count++;
-
-                    // Initalize a new Service Object
-                    Service newService = new Service(count, identificationNumber, firstName, lastName, phoneNumber, make, model, year, colour, true, true, true, roundedCost);
-
-                    // Add newService to the Serives list view
-                    services.Add(newService);
-
-                } else
+                if (buttonName == "UpdateButton")
                 {
 
                     // Initalize a new Service Object
@@ -210,6 +208,17 @@ namespace Assignment3_CarServiceShop
 
                     }
 
+                } 
+                else
+                {
+                    // Incrament count by 1
+                    count++;
+
+                    // Initalize a new Service Object
+                    Service newService = new Service(count, identificationNumber, firstName, lastName, phoneNumber, make, model, year, colour, true, true, true, roundedCost);
+
+                    // Add newService to the Serives list view
+                    services.Add(newService);
                 }
 
 
@@ -249,14 +258,17 @@ namespace Assignment3_CarServiceShop
                 // Removes seleted item from the services list view
                 services.RemoveAt(CarServiceSummaryListView.SelectedIndex);
                 count--;
-            } catch { 
-            
+            } catch {
+
+                // Show Error Message
+                MessageBox.Show("Please select an item from the table", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
         }
 
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
+            //Close the program
             Close();
         }
     }
